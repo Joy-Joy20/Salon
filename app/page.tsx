@@ -1,55 +1,20 @@
-import Image from "next/image";
+import Image from 'next/image'
 
-export default function Page() {
+export default function Home() {
   return (
-    <div className="bg-white p-8 rounded-xl shadow-md w-[350px] text-center">
-
-      {/* Profile Icon */}
-      <div className="flex justify-center mb-6">
-        <Image
-          src="/profile.png"
-          alt="profile"
-          width={80}
-          height={80}
-          className="rounded-full border"
-        />
-      </div>
-
-      {/* Name */}
-      <div className="text-left mb-4">
-        <label className="text-sm font-medium">Name</label>
-        <input
-          type="text"
-          defaultValue="Cha"
-          className="w-full mt-1 border rounded-md p-2"
-        />
-      </div>
-
-      {/* Phone */}
-      <div className="text-left mb-4">
-        <label className="text-sm font-medium">Phone Number</label>
-        <input
-          type="text"
-          defaultValue="09487560250"
-          className="w-full mt-1 border rounded-md p-2"
-        />
-      </div>
-
-      {/* Gender */}
-      <div className="text-left mb-6">
-        <label className="text-sm font-medium">Gender</label>
-        <input
-          type="text"
-          defaultValue="female"
-          className="w-full mt-1 border rounded-md p-2"
-        />
-      </div>
-
-      {/* Button */}
-      <button className="bg-red-400 hover:bg-red-500 text-white px-6 py-2 rounded-full w-full">
-        Complete Profile
-      </button>
-
+    <div className="flex flex-col items-center justify-center min-h-screen gap-6 p-8 bg-gradient-to-b from-pink-50 to-rose-100">
+      <Image
+        src="/logo.png"
+        alt="Logo"
+        width={320}
+        height={320}
+      />
+      <a
+        href="/login"
+        className="px-10 py-4 bg-pink-500 text-white rounded-full text-xl font-semibold hover:bg-pink-600 w-64 text-center shadow-md"
+      >
+        Get Started
+      </a>
     </div>
-  );
+  )
 }

@@ -1,20 +1,17 @@
-import "./globals.css";
+import './globals.css'
+import { ReactNode } from 'react'
 
 export const metadata = {
-  title: "Profile Setup",
-  description: "Complete your profile",
-};
+  title: 'Home',
+  description: 'Welcome to my website',
+}
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
-      <body className="bg-gray-100 flex items-center justify-center min-h-screen">
+      <body className="flex flex-col min-h-screen">
         {children}
       </body>
     </html>
-  );
+  )
 }
