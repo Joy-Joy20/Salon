@@ -1,4 +1,4 @@
-import Image from 'next/image'
+import Image from 'next/image';
 
 export default function Home() {
   return (
@@ -11,9 +11,9 @@ export default function Home() {
       />
       <a
         href="/login"
-        className="px-10 py-4 bg-pink-500 text-white rounded-full text-xl font-semibold hover:bg-pink-600 w-64 text-center shadow-md"
+        className="start-btn"
       >
-        Get Started
+        GET STARTED
       </a>
     </div>
   )
