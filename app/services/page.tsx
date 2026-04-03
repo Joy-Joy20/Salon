@@ -15,40 +15,38 @@ export default function ServicesPage() {
   const [selected, setSelected] = useState<string | null>(null);
 
   return (
-    <div className="p-4">
-      {/* Search input */}
-      <div className="mb-4">
-        <input
-          type="text"
-          placeholder="search services"
-          className="w-full p-2 rounded border border-gray-300 focus:outline-none focus:ring-2 focus:ring-pink-300"
-        />
-      </div>
+    <div className="flex flex-col items-center min-h-screen bg-gray-100 p-6">
 
       {/* Services grid */}
-      <div className="grid grid-cols-3 gap-4 mb-6">
+      <div className="grid grid-cols-3 gap-6 w-full max-w-xs mt-4">
         {services.map((service) => (
           <div
             key={service.name}
-            className={`service-card flex flex-col items-center justify-center p-4 rounded-lg border cursor-pointer ${
-              selected === service.name ? "bg-[#e07c7c] text-white" : "bg-white text-gray-800"
-            }`}
             onClick={() => setSelected(service.name)}
+            className="flex flex-col items-center cursor-pointer"
           >
-            <div className="text-3xl mb-2">{service.icon}</div>
-            <div className="text-sm font-semibold text-center">{service.name}</div>
+            <div className={`w-52 h-52 flex items-center justify-center rounded-full border-2 ${
+              selected === service.name
+                ? "bg-[#d98c8c] border-[#d98c8c]"
+                : "bg-gray-100 border-gray-300"
+            }`}>
+              <span className="text-4xl">{service.icon}</span>
+            </div>
+            <p className="text-xs font-semibold mt-2 text-center">{service.name}</p>
           </div>
         ))}
       </div>
 
       {/* Next button */}
-      <button
-        className="w-full bg-[#e07c7c] text-white py-2 rounded-lg hover:bg-[#c66c6c] transition"
-        disabled={!selected}
-        onClick={() => alert(`Selected Service: ${selected}`)}
-      >
-        NEXT
-      </button>
+      <div className="w-full max-w-xs mt-20 flex justify-center">
+        <a
+          href="/stylist"
+          className="start-btn"
+        >
+          NEXT
+        </a>
+      </div>
+
     </div>
   );
 }
