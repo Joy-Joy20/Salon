@@ -1,46 +1,64 @@
-/* globals.css */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Custom styles */
-html, body {
-  height: 100%;
-  margin: 0;
-  font-family: sans-serif;
-}
-
 body {
-  background-color: #f9a8d4; /* pink-300 */
+  font-family: sans-serif;
+  background: linear-gradient(to bottom, #ffe4e6, #ffffff);
 }
 
-button {
-  transition: background-color 0.3s;
-}
-
+/* BUTTON */
 .start-btn {
-  display: inline-block;
-  background-color: #f87171;
+  background-color: #f43f5e;
   color: white;
-  font-size: 1rem;
-  font-weight: 600;
-  padding: 10px 0;
-  width: 100%;
-  max-width: 286px;
+  padding: 12px 24px;
   border-radius: 999px;
-  border: none;
-  box-shadow: 0 4px 0 #b91c1c;
-  text-decoration: none;
-  text-align: center;
-  transition: all 0.15s ease;
+  font-weight: 600;
+  box-shadow: 0 4px 0 #be123c;
+  transition: 0.2s;
 }
 
 .start-btn:hover {
-  background-color: #f472b6;
+  background-color: #fb7185;
 }
 
 .start-btn:active {
-  box-shadow: none;
   transform: translateY(4px);
-  background-color: #f472b6;
+  box-shadow: none;
+}
+
+/* SECTION TITLE */
+.section-title {
+  font-size: 20px;
+  font-weight: bold;
+  color: #374151;
+}
+
+/* CARD */
+.card {
+  background: white;
+  padding: 16px;
+  border-radius: 16px;
+  border: 1px solid #eee;
+  transition: 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+.card-text {
+  font-size: 12px;
+  font-weight: 600;
+  margin-top: 6px;
+}
+
+/* AVATAR */
+.avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 999px;
+  overflow: hidden;
+  border: 3px solid #f9a8d4;
 }

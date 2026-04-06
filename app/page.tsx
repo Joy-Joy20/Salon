@@ -1,20 +1,24 @@
-import Image from 'next/image';
+"use client";
+
+import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen gap-6 p-8 bg-gradient-to-b from-pink-50 to-rose-100">
-      <Image
-        src="/logo.png"
-        alt="Logo"
-        width={320}
-        height={320}
-      />
-      <a
-        href="/login"
-        className="start-btn"
-      >
-        GET STARTED
-      </a>
+    <div className="min-h-screen bg-pink-100">
+
+      <header className="flex items-center justify-between px-6 py-4 bg-white shadow-sm">
+        <h1 className="text-xl font-bold text-pink-500">Salon App</h1>
+        <Link href="/login" className="text-xl">👤</Link>
+      </header>
+
+      <div className="flex flex-col items-center text-center py-16 px-6">
+        <Image src="/logo.png" alt="Logo" width={250} height={250} />
+        <h1 className="text-3xl font-bold text-pink-500 mt-4">Your beauty, our passion</h1>
+        <p className="text-gray-500 mt-2">Book your salon service anytime</p>
+        <Link href="/login" className="start-btn mt-6">Explore Services</Link>
+      </div>
+
     </div>
-  )
+  );
 }
